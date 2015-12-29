@@ -1,0 +1,53 @@
+.spinner {
+	position: relative;
+	margin: 100px auto;
+  width: 48px;
+  height: 48px;
+}
+
+.cube {
+	background-color: #8C397B;
+	position: absolute;
+	width: 8px;
+	height: 8px;
+}
+
+.top-left {
+	animation: move-top-left 2s infinite ease-in-out;
+}
+
+.top-right {
+  left: 40px;
+  animation: move-top-right 2s infinite ease-in-out;
+}
+
+.bottom-left {
+	top: 40px;
+	animation: move-bottom-left 2s infinite ease-in-out;
+}
+
+.bottom-right {
+	left: 40px;
+	top: 40px;
+	animation: move-bottom-right 2s infinite ease-in-out;
+}
+
+@keyframes move-top-left {
+  50% { transform: translateX(20px) translateY(20px) rotate(180deg) scale(2); } 
+  100% { transform: translateX(0px) translateY(0px) rotate(360deg); }
+}
+
+@keyframes move-top-right {
+	50% { transform: translateX(-20px) translateY(20px) rotate(180deg) scale(2); }
+	100% { transform: translateX(0px) translateY(0px) rotate(360deg); }
+}
+
+@keyframes move-bottom-left {
+	50% { transform: translateX(20px) translateY(-20px) rotate(180deg) scale(2); }
+	100% { transform: translateX(0px) translateY(0px) rotate(360deg); }
+}
+
+@keyframes move-bottom-right {
+	50% { transform: translateX(-20px) translateY(-20px) rotate(180deg) scale(2); }
+	100% { transform: translateX(0px) translateY(0px) rotate(360deg); }
+}
